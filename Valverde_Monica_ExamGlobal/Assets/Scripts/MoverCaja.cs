@@ -8,6 +8,8 @@ public class MoverCaja : MonoBehaviour
     [SerializeField] float speed = 50f;
     //Texto que contiene el texto de tiempo
     [SerializeField] Text textoHuevoroto;
+
+    [SerializeField] MeshRenderer myMeshRender;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +44,14 @@ public class MoverCaja : MonoBehaviour
             transform.position = new Vector3(150f, transform.position.y);
         }
 
-       // float desplZ = Input.GetAxis()
-
+      
+      
+        //para hacer que la cesta desaparezca creamos buleana para cuando se presiona el boton aparezca la cesta(no recuerdo si es false o true pero es asi)
+      
+        if (Input.GetKey("jostick button 5"))
+        {
+            myMeshRender.enabled = false;
+        }
 
 
     }
