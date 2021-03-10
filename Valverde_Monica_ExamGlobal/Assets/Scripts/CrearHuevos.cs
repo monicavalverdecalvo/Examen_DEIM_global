@@ -20,31 +20,51 @@ public class CrearHuevos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Crear huevos iniciales
-
-        for (int n = 1; n <= 30; n++)
-        {
-
-            CrearHuevo(n * distaciaInicial);
-        }
-
-        //Lanzo la corrutina
-       // StartCoroutine("InstanciadorHuevos");
+        StartCoroutine("HuevoCorrutine");
+        InicioHuevos();
     }
-//Creamos huevos de manera random
-    void CrearHuevo(float posZ = 0f)
+   
+
+     }*/
+    void CrearHuevo()
     {
-        randomNumber = Random.Range(0f, 7f);
-        RandomPos = new Vector3(randomNumber, 0, 0);
-        RandomPos = new Vector3(randomNumber, 0, posZ);
-        //print(RandomPos);
-        Vector3 FinalPos = InitPos.position + RandomPos;
-        Instantiate(Huevo, FinalPos, Quaternion.identity);
+        float posRandomx = Random.Range(0f, -157f);
+        float posRandomz = Random.Range(0f, -113f);
+        float posRandomy = Random.Range(0f, 200f);
+        Vector3 DestPos = new Vector3(posRandomx, posRandomy, posRandomz);
+        Vector3 NewPos = InitPos.position + DestPos;
 
+        //Como tenemos su componente Transform, le indicamos que lo que quiero es su posición
+        Instantiate(Huevo, NewPos, Quaternion.identity);
     }
-        // Update is called once per frame
-        void Update()
+// Update is called once per frame
+        IEnumerator HuevoCorrutine()
         {
 
+                for (int n = 0; ; n++)
+                 {
+
+                         //Intancio el prefab en coordenadas 0,0,0
+                        
+                         CrearHuevo();
+                         yield return new WaitForSeconds(0.1f);
+
+
+                }
         }
+// iniciamos las columnas para que caigan en x y z
+            void InicioColumnas()
+            {
+                      for (int n = 0; n < 5; n++)
+                         {
+                            float posRandomx = Random.Range(170f, -160f);
+                           float posRandomz = Random.Range(240f, -110f)
+                            Vector3 NewPos = new Vector3(posRandomx, posRandomy, posRandomz);
+                            Vector3 finalPos = RefPos.position + NewPos;
+                            Instantiate(MyColumn, finalPos, Quaternion.identity);
+                      }
+            }   
+
+
+
 }
