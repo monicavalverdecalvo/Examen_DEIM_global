@@ -25,7 +25,8 @@ public class CrearHuevos : MonoBehaviour
     }
    
 
-     }*/
+     }
+//creamos huvos de manera random para que caigan 
     void CrearHuevo()
     {
         float posRandomx = Random.Range(0f, -157f);
@@ -52,7 +53,7 @@ public class CrearHuevos : MonoBehaviour
 
                 }
         }
-// iniciamos las columnas para que caigan en x y z
+// iniciamos los huevos para que caigan en x y z
             void InicioColumnas()
             {
                       for (int n = 0; n < 5; n++)
@@ -60,8 +61,8 @@ public class CrearHuevos : MonoBehaviour
                             float posRandomx = Random.Range(170f, -160f);
                            float posRandomz = Random.Range(240f, -110f)
                             Vector3 NewPos = new Vector3(posRandomx, posRandomy, posRandomz);
-                            Vector3 finalPos = RefPos.position + NewPos;
-                            Instantiate(MyColumn, finalPos, Quaternion.identity);
+                            Vector3 finalPos = InitPos.position + NewPos;
+                            Instantiate(Huevo, finalPos, Quaternion.identity);
                       }
             }   
 

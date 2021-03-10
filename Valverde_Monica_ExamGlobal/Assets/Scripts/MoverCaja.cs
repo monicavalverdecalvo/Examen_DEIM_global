@@ -8,7 +8,7 @@ public class MoverCaja : MonoBehaviour
     [SerializeField] float speed = 50f;
     //Texto que contiene el texto de tiempo
     [SerializeField] Text textoHuevoroto;
-
+    //variable para hacer desparecer la cesta
     [SerializeField] MeshRenderer myMeshRender;
     // Start is called before the first frame update
     void Start()
@@ -52,7 +52,7 @@ public class MoverCaja : MonoBehaviour
         {
             myMeshRender.enabled = false;
         }
-
+        // para que la caja no se mueva sera igual con una buleana diciendole que si esta visible la cesta no permita mover la caja y si no esta visible la cesta la caja si se pueda mover.
 
     }
 }

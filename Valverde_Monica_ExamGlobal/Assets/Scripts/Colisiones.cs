@@ -33,7 +33,7 @@ public class Colisiones : MonoBehaviour
     void HuevoRoto()
     {
         myMesh.enabled = false;
-        speed = 0;
+        speed = 3;
         pos = transform.position;
       
         audioSource.PlayOneShot(explosion, 1f);
