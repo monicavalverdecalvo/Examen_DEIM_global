@@ -29,7 +29,7 @@ public class CrearHuevos : MonoBehaviour
         }
 
         //Lanzo la corrutina
-        StartCoroutine("InstanciadorHuevos");
+       // StartCoroutine("InstanciadorHuevos");
     }
 //Creamos huevos de manera random
     void CrearHuevo(float posZ = 0f)
