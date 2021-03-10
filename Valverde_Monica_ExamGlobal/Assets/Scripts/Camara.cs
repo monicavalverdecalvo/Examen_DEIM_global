@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
+    //con este codigo seguimos a la caja
     [SerializeField] Transform PointAt;
     
     // Start is called before the first frame update
