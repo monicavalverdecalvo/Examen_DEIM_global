@@ -33,13 +33,13 @@ public class MoverCaja : MonoBehaviour
         transform.Translate(Vector3.left * desplX * Time.deltaTime);
 
         //Limitador en X
-        if (transform.position.x <= -185f)
+        if (transform.position.x <= -150f)
         {
-            transform.position = new Vector3(-185f, transform.position.y);
+            transform.position = new Vector3(-150f, transform.position.y);
         }
-        else if (transform.position.x >= 185f)
+        else if (transform.position.x >= 150f)
         {
-            transform.position = new Vector3(185f, transform.position.y);
+            transform.position = new Vector3(150f, transform.position.y);
         }
 
        // float desplZ = Input.GetAxis()
