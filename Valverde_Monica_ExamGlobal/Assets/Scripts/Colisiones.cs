@@ -8,8 +8,11 @@ public class Colisiones : MonoBehaviour
     [SerializeField] MeshRenderer myMesh;
     Vector3 pos;
     public float speed = 3f;
+   
+    //para los diferentes tipos de audio que hay
     AudioSource audioSource;
-    [SerializeField] AudioClip ;
+    [SerializeField] AudioClip Fondo;
+    [SerializeField] AudioClip HuevoCae;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
