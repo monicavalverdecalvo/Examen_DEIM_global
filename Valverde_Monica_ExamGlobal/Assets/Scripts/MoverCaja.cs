@@ -6,6 +6,8 @@ public class MoverCaja : MonoBehaviour
 {
 
     [SerializeField] float speed = 50f;
+    //Texto que contiene el texto de tiempo
+    [SerializeField] Text textoHuevoroto;
     // Start is called before the first frame update
     void Start()
     {
